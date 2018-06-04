@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>receiveCode</title>
+</head>
+<link rel="stylesheet" href="/css/master.css">
+
+<body>
+  <div>
+    <h2>Schedule List</h2>
+  </div>
+  <table class="scheduleTable">
+    <thead>
+      <tr>
+        <th>Sequence</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% for(var i=0; i< rows.length; i++){  %>
+        <tr>
+          <td>
+            <%= rows[i].seq %>
+          </td>
+          <td>
+            <%= rows[i].startDate %>
+          </td>
+          <td>
+            <%= rows[i].endDate %>
+          </td>
+          <td>
+            <%= rows[i].description %>
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+    
+  </table>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div>
+      <h3>Please input values ( StartDate, EndDate ) ! If input value is empty and input format is not correct, boundary value is not applied</h3>
+    </div>
+    <form action="setDates" method="GET">
+
+      <div class="row">
+        <div class="col-25">
+          <label for="startDate">StartDate :</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="startDate" placeholder="YYYY-MM-DD (  If present, bounds all events returned by the query to have a starting event datetime >= to value.  )">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+            <label for="endDate">EndDate :</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="endDate" placeholder="YYYY-MM-DD (  If present, bounds all events returned by the query to have a starting event datetime <= to value.  )" >
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Search">
+      </div>
+    </form>
+  </div>
+  <div>
+    <h2>Output</h2>
+  </div>
+  <div class="col-75">
+    <textarea id="subject" name="subject" readonly="readonly" cols="210" rows="40">
+            <%= printEvents %>
+    </textarea>
+  </div>
+</body>
+
+</html>
+
+<!--
+
+POST /oauth2/v4/token HTTP/1.1
+Host: www.googleapis.com
+Content-Type: application/x-www-form-urlencoded
+
+code=4/P7q7W91a-oMsCeLvIaQm6bTrgtp7&
+client_id=your_client_id&
+client_secret=your_client_secret&
+redirect_uri=https://oauth2.example.com/code&
+grant_type=authorization_code
+
+-->

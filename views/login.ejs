@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="/css/master.css">
+
+<body>
+    <div class="login">
+        
+        <h1>Authentication using google oAuth</h1>
+        <a href=" https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A3007%2FreceiveCode&response_type=code&client_id=678860274860-ecbtjub1dkd9qn7u7dljfesgifk5ahjn.apps.googleusercontent.com">Go authenticating to use Google api</a>
+    </div>
+</body>
+
+</html>
+
+<!--
+
+    ==> https://developers.google.com/identity/protocols/OAuth2WebServer
+
+ https://accounts.google.com/o/oauth2/v2/auth?
+ scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.metadata.readonly&
+ access_type=offline&
+ include_granted_scopes=true&
+ state=state_parameter_passthrough_value&
+ redirect_uri=http%3A%2F%2Foauth2.example.com%2Fcallback&
+ response_type=code&
+ client_id=client_id
+
+ ==> online url encode  (to delete unnecessary url such as blank or spacing )
+
+    ex)
+https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly
+
+==> converter encoding 
+==> https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly 
+-->

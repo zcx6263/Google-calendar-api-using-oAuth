@@ -1,0 +1,31 @@
+
+<!--
+    to practice receiving refresh token
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>refreshToken</title>
+</head>
+<body>
+   <form action="https://www.googleapis.com/oauth2/v4/token" method="POST" 
+   enctype="application/x-www-form-urlencoded">
+        client_id : <input type="text" name="client_id" value=""><br>
+        client_secret : <input type="text" name="client_secret" value=""><br>
+        redirect_uri : <input type="text" name="refresh_token" value=""><br>
+        grant_type : <input type="text" name="grant_type" value="refresh_token"><br>
+        <input type="submit">
+   </form>
+</body>
+</html>
+
+<!--
+POST /oauth2/v4/token HTTP/1.1
+Host: www.googleapis.com
+Content-Type: application/x-www-form-urlencoded
+
+client_id=<your_client_id>&
+client_secret=<your_client_secret>&
+refresh_token=<refresh_token>&
+grant_type=refresh_token
+-->

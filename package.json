@@ -1,0 +1,28 @@
+{
+  "name": "local_calendar_sync",
+  "version": "1.0.0",
+  "description": "A simple calendar syncing system that keeps a local cache of calendar events that sync to Google Calendar API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaspersone/gt-local-calendar-sync.git"
+  },
+  "author": "GoodTime.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaspersone/gt-local-calendar-sync/issues"
+  },
+  "homepage": "https://github.com/jaspersone/gt-local-calendar-sync#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^16.1.0",
+    "mysql": "^2.15.0"
+  }
+}
