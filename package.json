@@ -21,8 +21,8 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "google-auth-library": "^0.10.0",
-    "googleapis": "^16.1.0",
+    "google-auth-library": "^6.0.0",
+    "googleapis": "^51.0.0",
     "mysql": "^2.15.0"
   },
   "devDependencies": {
