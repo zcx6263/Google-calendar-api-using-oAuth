@@ -24,5 +24,9 @@
     "google-auth-library": "^0.10.0",
     "googleapis": "^16.1.0",
     "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.15",
+    "node-extend": "^0.2.0"
   }
 }
